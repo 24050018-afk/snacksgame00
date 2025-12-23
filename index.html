@@ -2,16 +2,24 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game - HTML/CSS/JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Snake Neon Mobile</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="game-container">
         <h1>Điểm: <span id="score">0</span></h1>
-        <canvas id="snakeGame" width="400" height="400"></canvas>
-        <p>Sử dụng các phím mũi tên để di chuyển</p>
+        <canvas id="snakeGame" width="340" height="340"></canvas>
+        
+        <div class="controls">
+            <button class="btn up" onclick="setDirection('UP')">▲</button>
+            <div class="middle-btns">
+                <button class="btn left" onclick="setDirection('LEFT')">◀</button>
+                <button class="btn down" onclick="setDirection('DOWN')">▼</button>
+                <button class="btn right" onclick="setDirection('RIGHT')">▶</button>
+            </div>
+        </div>
     </div>
 
     <script src="main.js"></script>

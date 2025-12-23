@@ -1,33 +1,63 @@
+* {
+    touch-action: manipulation; /* Ngăn zoom khi bấm nhanh */
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
-    background-color: #0d1117; /* Nền tối sâu */
-    color: #00f2ff; /* Màu chữ xanh neon */
-    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d1117;
+    color: #00f2ff;
+    font-family: sans-serif;
+    overflow: hidden; /* Chống cuộn trang khi đang chơi */
 }
 
 .game-container {
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px #00f2ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 canvas {
     border: 3px solid #00f2ff;
     background-color: #000;
-    box-shadow: 0 0 20px #00f2ff;
-    border-radius: 8px;
+    box-shadow: 0 0 15px #00f2ff;
+    max-width: 90vw; /* Tự động co giãn theo chiều rộng điện thoại */
+    max-height: 50vh;
 }
 
-p {
-    margin-top: 15px;
-    color: #8b949e;
-    letter-spacing: 1px;
+/* Giao diện nút bấm */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+
+.middle-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    width: 65px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #00f2ff;
+    border-radius: 50%;
+    color: #00f2ff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+}
+
+.btn:active {
+    background: #00f2ff;
+    color: #000;
+}
+
+.up { align-self: center; }
